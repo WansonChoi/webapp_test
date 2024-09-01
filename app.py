@@ -19,7 +19,7 @@ from dash import dash_table
 # from dash import html, dcc, Input, Output, State
 # import dash_table
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 ### app.py로 만들면서 load해줘야하는 부분들.
 from src.plotly_UMAP_main import plotly_UMAP_main
