@@ -1,5 +1,5 @@
 import os, sys, re
-import numpy as np
+# import numpy as np
 import pandas as pd
 from functools import reduce
 
@@ -8,7 +8,7 @@ from functools import reduce
 # import umap.umap_ as UMAP
 
 import plotly.express as px
-from sklearn.datasets import load_digits
+# from sklearn.datasets import load_digits
 
 ## Dash 관련
 import dash
@@ -39,12 +39,18 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA], suppress_cal
 df_UMAP_UKBB = pd.read_csv("data/UKBB.UMAP.T715.txt", sep='\t', header=0, index_col=0)
 df_cmap_UKBB = pd.read_csv("data/UKBB.cmap.T715.txt", sep='\t', header=0, dtype=str)
 df_rg_UKBB = pd.read_csv(
-    "data/UKBB.T715.ctldsc_icor.gcor.txt", sep='\t', header=0, 
+    "data/UKBB.T715.ctldsc_icor.gcor.gzip", sep='\t', header=0, compression='gzip',
     usecols=["id_phe1", "id_phe2", "phe1_name", "phe2_name", "gcor", "gcor_SE", "zscore", "P"]
 )
-df_ToPlot_UKBB = pd.read_excel(
-    "data/SupplementaryTable1.xlsx", header=0, dtype={"Phenocode_nealelab": str}
+# df_ToPlot_UKBB = pd.read_excel(
+#     "data/SupplementaryTable1.xlsx", header=0, dtype={"Phenocode_nealelab": str}
+# )
+df_ToPlot_UKBB = pd.read_csv(
+    "data/SupplementaryTable1.gzip", sep='\t', header=0, dtype={"Phenocode_nealelab": str},
+    compression='gzip'
 )
+
+
 
 print(df_UMAP_UKBB)
 print(df_cmap_UKBB)
@@ -57,11 +63,13 @@ print(df_ToPlot_UKBB)
 df_UMAP_BBJ = pd.read_csv("data/BBJ.UMAP.T220.txt", sep='\t', header=0, index_col=0)
 df_cmap_BBJ = pd.read_csv("data/BBJ.cmap.T220.txt", sep='\t', header=0, dtype=str)
 df_rg_BBJ = pd.read_csv(
-    "data/BBJ.icor.ctldsc.T220.r24310.gcor.FIXED.20240314.txt", sep='\t', header=0,
+    "data/BBJ.icor.ctldsc.T220.r24310.gcor.FIXED.20240314.gzip", sep='\t', header=0, compression='gzip',
     usecols=["phe1_name", "phe2_name", "gcor", "gcor_SE", "zscore", "P"]
 )
 
-df_ToPlot_BBJ = pd.read_excel("data/SupplementaryTable2.xlsx", header=0)
+# df_ToPlot_BBJ = pd.read_excel("data/SupplementaryTable2.xlsx", header=0)
+df_ToPlot_BBJ = pd.read_csv("data/SupplementaryTable2.gzip", sep='\t', header=0, compression='gzip',)
+
 
 print(df_UMAP_BBJ)
 print(df_cmap_BBJ)
