@@ -1,191 +1,126 @@
-name: Plotly
-channels:
-  - conda-forge
-  - bioconda
-  - defaults
-dependencies:
-  - appnope=0.1.4=pyhd8ed1ab_0
-  - asttokens=2.4.1=pyhd8ed1ab_0
-  - bleach=6.1.0=pyhd8ed1ab_0
-  - bokeh=3.4.2=pyhd8ed1ab_0
-  - brotli=1.1.0=h0dc2134_1
-  - brotli-bin=1.1.0=h0dc2134_1
-  - brotli-python=1.1.0=py312heafc425_1
-  - bzip2=1.0.8=h10d778d_5
-  - ca-certificates=2024.7.4=h8857fd0_0
-  - certifi=2024.7.4=pyhd8ed1ab_0
-  - cffi=1.16.0=py312h38bf5a0_0
-  - charset-normalizer=3.3.2=pyhd8ed1ab_0
-  - colorama=0.4.6=pyhd8ed1ab_0
-  - colorcet=3.1.0=pyhd8ed1ab_0
-  - comm=0.2.2=pyhd8ed1ab_0
-  - contourpy=1.2.1=py312h9230928_0
-  - cycler=0.12.1=pyhd8ed1ab_0
-  - debugpy=1.8.1=py312hede676d_0
-  - decorator=5.1.1=pyhd8ed1ab_0
-  - exceptiongroup=1.2.0=pyhd8ed1ab_2
-  - executing=2.0.1=pyhd8ed1ab_0
-  - fonttools=4.53.0=py312hbd25219_0
-  - freetype=2.12.1=h60636b9_2
-  - h2=4.1.0=pyhd8ed1ab_0
-  - holoviews=1.19.1=pyhd8ed1ab_0
-  - hpack=4.0.0=pyh9f0ad1d_0
-  - hvplot=0.10.0=pyhd8ed1ab_0
-  - hyperframe=6.0.1=pyhd8ed1ab_0
-  - icu=73.2=hf5e326d_0
-  - idna=3.7=pyhd8ed1ab_0
-  - importlib-metadata=7.2.0=pyha770c72_0
-  - importlib_metadata=7.2.0=hd8ed1ab_0
-  - ipykernel=6.29.4=pyh57ce528_0
-  - ipython=8.25.0=pyh707e725_0
-  - jedi=0.19.1=pyhd8ed1ab_0
-  - jinja2=3.1.4=pyhd8ed1ab_0
-  - joblib=1.4.2=pyhd8ed1ab_0
-  - jupyter_client=8.6.2=pyhd8ed1ab_0
-  - jupyter_core=5.7.2=py312hb401068_0
-  - kiwisolver=1.4.5=py312h49ebfd2_1
-  - krb5=1.21.2=hb884880_0
-  - lcms2=2.16=ha2f27b4_0
-  - lerc=4.0.0=hb486fe8_0
-  - libblas=3.9.0=22_osx64_openblas
-  - libbrotlicommon=1.1.0=h0dc2134_1
-  - libbrotlidec=1.1.0=h0dc2134_1
-  - libbrotlienc=1.1.0=h0dc2134_1
-  - libcblas=3.9.0=22_osx64_openblas
-  - libcxx=17.0.6=h88467a6_0
-  - libdeflate=1.20=h49d49c5_0
-  - libedit=3.1.20191231=h0678c8f_2
-  - libexpat=2.6.2=h73e2aa4_0
-  - libffi=3.4.2=h0d85af4_5
-  - libgfortran=5.0.0=13_2_0_h97931a8_3
-  - libgfortran5=13.2.0=h2873a65_3
-  - libhwloc=2.10.0=default_h456cccd_1001
-  - libiconv=1.17=hd75f5a5_2
-  - libjpeg-turbo=3.0.0=h0dc2134_1
-  - liblapack=3.9.0=22_osx64_openblas
-  - libllvm14=14.0.6=hc8e404f_4
-  - libopenblas=0.3.27=openmp_hfef2a42_0
-  - libpng=1.6.43=h92b6c6a_0
-  - libsodium=1.0.18=hbcb3906_1
-  - libsqlite=3.46.0=h1b8f9f3_0
-  - libtiff=4.6.0=h129831d_3
-  - libuv=1.48.0=h67532ce_0
-  - libwebp-base=1.4.0=h10d778d_0
-  - libxcb=1.16=h0dc2134_0
-  - libxml2=2.12.7=h3e169fe_1
-  - libzlib=1.3.1=h87427d6_1
-  - linkify-it-py=2.0.3=pyhd8ed1ab_0
-  - llvm-openmp=18.1.8=h15ab845_0
-  - markdown=3.6=pyhd8ed1ab_0
-  - markdown-it-py=3.0.0=pyhd8ed1ab_0
-  - markupsafe=2.1.5=py312h41838bb_0
-  - matplotlib=3.8.4=py312hb401068_2
-  - matplotlib-base=3.8.4=py312hb6d62fa_2
-  - matplotlib-inline=0.1.7=pyhd8ed1ab_0
-  - mdit-py-plugins=0.4.1=pyhd8ed1ab_0
-  - mdurl=0.1.2=pyhd8ed1ab_0
-  - munkres=1.1.4=pyh9f0ad1d_0
-  - ncurses=6.5=h5846eda_0
-  - nest-asyncio=1.6.0=pyhd8ed1ab_0
-  - nodejs=22.4.0=hbe3ef2c_0
-  - numba=0.60.0=py312hc3b515d_0
-  - numpy=2.0.0=py312h8813227_0
-  - openjpeg=2.5.2=h7310d3a_0
-  - openssl=3.3.1=h87427d6_2
-  - packaging=24.1=pyhd8ed1ab_0
-  - pandas=2.2.2=py312h1171441_1
-  - panel=1.4.4=pyhd8ed1ab_0
-  - param=2.1.1=pyhff2d567_0
-  - parso=0.8.4=pyhd8ed1ab_0
-  - pexpect=4.9.0=pyhd8ed1ab_0
-  - pickleshare=0.7.5=py_1003
-  - pillow=10.3.0=py312hbd70edc_1
-  - pip=24.0=pyhd8ed1ab_0
-  - platformdirs=4.2.2=pyhd8ed1ab_0
-  - prompt-toolkit=3.0.47=pyha770c72_0
-  - psutil=5.9.8=py312h41838bb_0
-  - pthread-stubs=0.4=hc929b4f_1001
-  - ptyprocess=0.7.0=pyhd3deb0d_0
-  - pure_eval=0.2.2=pyhd8ed1ab_0
-  - pycparser=2.22=pyhd8ed1ab_0
-  - pygments=2.18.0=pyhd8ed1ab_0
-  - pynndescent=0.5.13=pyhff2d567_0
-  - pyparsing=3.1.2=pyhd8ed1ab_0
-  - pysocks=1.7.1=pyha2e5f31_6
-  - python=3.12.4=h37a9e06_0_cpython
-  - python-tzdata=2024.1=pyhd8ed1ab_0
-  - python_abi=3.12=4_cp312
-  - pytz=2024.1=pyhd8ed1ab_0
-  - pyviz_comms=3.0.2=pyhd8ed1ab_1
-  - pyyaml=6.0.1=py312h104f124_1
-  - pyzmq=26.0.3=py312ha04878a_0
-  - readline=8.2=h9e318b2_1
-  - requests=2.32.3=pyhd8ed1ab_0
-  - scikit-learn=1.5.0=py312hc214ba5_1
-  - scipy=1.13.1=py312hb9702fa_0
-  - six=1.16.0=pyh6c4a22f_0
-  - stack_data=0.6.2=pyhd8ed1ab_0
-  - tbb=2021.12.0=h3c5361c_1
-  - threadpoolctl=3.5.0=pyhc1e730c_0
-  - tk=8.6.13=h1abcd95_1
-  - tornado=6.4.1=py312hbd25219_0
-  - tqdm=4.66.4=pyhd8ed1ab_0
-  - traitlets=5.14.3=pyhd8ed1ab_0
-  - typing_extensions=4.12.2=pyha770c72_0
-  - tzdata=2024a=h0c530f3_0
-  - uc-micro-py=1.0.3=pyhd8ed1ab_0
-  - umap-learn=0.5.5=py312hb401068_1
-  - urllib3=2.2.2=pyhd8ed1ab_1
-  - wcwidth=0.2.13=pyhd8ed1ab_0
-  - webencodings=0.5.1=pyhd8ed1ab_2
-  - wheel=0.43.0=pyhd8ed1ab_1
-  - xorg-libxau=1.0.11=h0dc2134_0
-  - xorg-libxdmcp=1.1.3=h35c211d_0
-  - xyzservices=2024.6.0=pyhd8ed1ab_0
-  - xz=5.2.6=h775f41a_0
-  - yaml=0.2.5=h0d85af4_2
-  - zeromq=4.3.5=hde137ed_4
-  - zipp=3.19.2=pyhd8ed1ab_0
-  - zlib=1.3.1=h87427d6_1
-  - zstandard=0.23.0=py312h331e495_0
-  - zstd=1.5.6=h915ae27_0
-  - pip:
-    - annotated-types==0.7.0
-    - attrs==23.2.0
-    - blinker==1.8.2
-    - cachelib==0.9.0
-    - click==8.1.7
-    - dash==2.17.1
-    - dash-bootstrap-components==1.6.0
-    - dash-core-components==2.0.0
-    - dash-defer-js-import==0.0.2
-    - dash-extensions==1.0.17
-    - dash-html-components==2.0.0
-    - dash-react-components==0.2.3
-    - dash-table==5.0.0
-    - dataclass-wizard==0.22.3
-    - editorconfig==0.12.4
-    - et-xmlfile==1.1.0
-    - fastjsonschema==2.20.0
-    - flask==3.0.3
-    - flask-caching==2.3.0
-    - itsdangerous==2.2.0
-    - jsbeautifier==1.15.1
-    - jsonschema==4.22.0
-    - jsonschema-specifications==2023.12.1
-    - llvmlite==0.43.0
-    - more-itertools==10.3.0
-    - nbformat==5.10.4
-    - openpyxl==3.1.4
-    - plotly==5.22.0
-    - pydantic==2.8.2
-    - pydantic-core==2.20.1
-    - python-dateutil==2.9.0.post0
-    - referencing==0.35.1
-    - retrying==1.3.4
-    - rpds-py==0.18.1
-    - ruff==0.4.10
-    - setuptools==70.1.0
-    - tenacity==8.4.1
-    - werkzeug==3.0.3
-prefix: /Users/wansonchoi/miniconda3/envs/Plotly
+annotated-types==0.7.0
+appnope==0.1.4
+asttokens==2.4.1
+attrs==23.2.0
+bleach==6.1.0
+blinker==1.8.2
+bokeh==3.4.2
+Brotli==1.1.0
+cachelib==0.9.0
+certifi==2024.7.4
+cffi==1.16.0
+charset-normalizer==3.3.2
+click==8.1.7
+colorama==0.4.6
+colorcet==3.1.0
+comm==0.2.2
+contourpy==1.2.1
+cycler==0.12.1
+dash==2.17.1
+dash-bootstrap-components==1.6.0
+dash-core-components==2.0.0
+dash_defer_js_import==0.0.2
+dash-extensions==1.0.17
+dash-html-components==2.0.0
+dash-react-components==0.2.3
+dash-table==5.0.0
+dataclass-wizard==0.22.3
+debugpy==1.8.1
+decorator==5.1.1
+EditorConfig==0.12.4
+et-xmlfile==1.1.0
+exceptiongroup==1.2.0
+executing==2.0.1
+fastjsonschema==2.20.0
+Flask==3.0.3
+Flask-Caching==2.3.0
+fonttools==4.53.0
+h2==4.1.0
+holoviews==1.19.1
+hpack==4.0.0
+hvplot==0.10.0
+hyperframe==6.0.1
+idna==3.7
+importlib_metadata==7.2.0
+ipykernel==6.29.4
+ipython==8.25.0
+itsdangerous==2.2.0
+jedi==0.19.1
+Jinja2==3.1.4
+joblib==1.4.2
+jsbeautifier==1.15.1
+jsonschema==4.22.0
+jsonschema-specifications==2023.12.1
+jupyter_client==8.6.2
+jupyter_core==5.7.2
+kiwisolver==1.4.5
+linkify-it-py==2.0.3
+llvmlite==0.43.0
+Markdown==3.6
+markdown-it-py==3.0.0
+MarkupSafe==2.1.5
+matplotlib==3.8.4
+matplotlib-inline==0.1.7
+mdit-py-plugins==0.4.1
+mdurl==0.1.2
+more-itertools==10.3.0
+munkres==1.1.4
+nbformat==5.10.4
+nest_asyncio==1.6.0
+numba==0.60.0
+numpy==2.0.0
+openpyxl==3.1.4
+packaging==24.1
+pandas==2.2.2
+panel==1.4.4
+param==2.1.1
+parso==0.8.4
+pexpect==4.9.0
+pickleshare==0.7.5
+pillow==10.3.0
+pip==24.0
+platformdirs==4.2.2
+plotly==5.22.0
+prompt_toolkit==3.0.47
+psutil==5.9.8
+ptyprocess==0.7.0
+pure-eval==0.2.2
+pycparser==2.22
+pydantic==2.8.2
+pydantic_core==2.20.1
+Pygments==2.18.0
+pynndescent==0.5.13
+pyparsing==3.1.2
+PySocks==1.7.1
+python-dateutil==2.9.0
+pytz==2024.1
+pyviz_comms==3.0.2
+PyYAML==6.0.1
+pyzmq==26.0.3
+referencing==0.35.1
+requests==2.32.3
+retrying==1.3.4
+rpds-py==0.18.1
+ruff==0.4.10
+scikit-learn==1.5.0
+scipy==1.13.1
+setuptools==70.1.0
+six==1.16.0
+stack-data==0.6.2
+tenacity==8.4.1
+threadpoolctl==3.5.0
+tornado==6.4.1
+tqdm==4.66.4
+traitlets==5.14.3
+typing_extensions==4.12.2
+tzdata==2024.1
+uc-micro-py==1.0.3
+umap-learn==0.5.5
+urllib3==2.2.2
+wcwidth==0.2.13
+webencodings==0.5.1
+Werkzeug==3.0.3
+wheel==0.43.0
+xyzservices==2024.6.0
+zipp==3.19.2
+zstandard==0.23.0
