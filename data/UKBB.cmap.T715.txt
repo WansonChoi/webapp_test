@@ -1,0 +1,15 @@
+cluster_N	color
+14	#1f77b4
+1	#ff7f0e
+2	#279e68
+3	#d62728
+4	#aa40fc
+5	#8c564b
+6	#e377c2
+7	#b5bd61
+8	#17becf
+9	#aec7e8
+10	#ffbb78
+11	#98df8a
+12	#ff9896
+13	#c5b0d5
