@@ -36,17 +36,17 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA], suppress_cal
 ### 귀찮아서 그냥 global로 load해놓고 쓸 data들
 
 ## UKBB
-df_UMAP_UKBB = pd.read_csv("data/UKBB.UMAP.T715.txt", sep='\t', header=0, index_col=0)
-df_cmap_UKBB = pd.read_csv("data/UKBB.cmap.T715.txt", sep='\t', header=0, dtype=str)
+df_UMAP_UKBB = pd.read_csv("/home/wschoi/webapp_test/data/UKBB.UMAP.T715.txt", sep='\t', header=0, index_col=0)
+df_cmap_UKBB = pd.read_csv("/home/wschoi/webapp_test/data/UKBB.cmap.T715.txt", sep='\t', header=0, dtype=str)
 df_rg_UKBB = pd.read_csv(
-    "data/UKBB.T715.ctldsc_icor.gcor.gzip", sep='\t', header=0, compression='gzip',
+    "/home/wschoi/webapp_test/data/UKBB.T715.ctldsc_icor.gcor.gzip", sep='\t', header=0, compression='gzip',
     usecols=["id_phe1", "id_phe2", "phe1_name", "phe2_name", "gcor", "gcor_SE", "zscore", "P"]
 )
 # df_ToPlot_UKBB = pd.read_excel(
 #     "data/SupplementaryTable1.xlsx", header=0, dtype={"Phenocode_nealelab": str}
 # )
 df_ToPlot_UKBB = pd.read_csv(
-    "data/SupplementaryTable1.gzip", sep='\t', header=0, dtype={"Phenocode_nealelab": str},
+    "/home/wschoi/webapp_test/data/SupplementaryTable1.gzip", sep='\t', header=0, dtype={"Phenocode_nealelab": str},
     compression='gzip'
 )
 
@@ -60,15 +60,15 @@ print(df_ToPlot_UKBB)
 
 
 ## BBJ
-df_UMAP_BBJ = pd.read_csv("data/BBJ.UMAP.T220.txt", sep='\t', header=0, index_col=0)
-df_cmap_BBJ = pd.read_csv("data/BBJ.cmap.T220.txt", sep='\t', header=0, dtype=str)
+df_UMAP_BBJ = pd.read_csv("/home/wschoi/webapp_test/data/BBJ.UMAP.T220.txt", sep='\t', header=0, index_col=0)
+df_cmap_BBJ = pd.read_csv("/home/wschoi/webapp_test/data/BBJ.cmap.T220.txt", sep='\t', header=0, dtype=str)
 df_rg_BBJ = pd.read_csv(
-    "data/BBJ.icor.ctldsc.T220.r24310.gcor.FIXED.20240314.gzip", sep='\t', header=0, compression='gzip',
+    "/home/wschoi/webapp_test/data/BBJ.icor.ctldsc.T220.r24310.gcor.FIXED.20240314.gzip", sep='\t', header=0, compression='gzip',
     usecols=["phe1_name", "phe2_name", "gcor", "gcor_SE", "zscore", "P"]
 )
 
 # df_ToPlot_BBJ = pd.read_excel("data/SupplementaryTable2.xlsx", header=0)
-df_ToPlot_BBJ = pd.read_csv("data/SupplementaryTable2.gzip", sep='\t', header=0, compression='gzip',)
+df_ToPlot_BBJ = pd.read_csv("/home/wschoi/webapp_test/data/SupplementaryTable2.gzip", sep='\t', header=0, compression='gzip',)
 
 
 print(df_UMAP_BBJ)
@@ -526,4 +526,4 @@ app.clientside_callback(
 
 # 대시보드 서버 실행
 if __name__ == '__main__':
-    app.run_server(debug=False, port=8000)
+    app.run_server(debug=False)
